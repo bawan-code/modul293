@@ -31,11 +31,6 @@ body {
 
 }
 
-.cosmereText {
-    font-size: 110%;
-    color: blueviolet;
-}
-
 header {
     grid-area: header;
     width: 100%;
@@ -65,4 +60,23 @@ footer {
     justify-content: center;
     gap: 20px;
     width: 100%;
+}
+
+/* diverses Styling */
+
+.cosmereText {
+    color: blueviolet;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+address{
+    text-align: end;
+}
+
+em::before{
+    content: "'";
+}
+em::after{
+    content: "'";
 }
