@@ -39,7 +39,7 @@ header {
 
 nav {
     grid-area: nav;
-    
+
 }
 
 main {
@@ -53,11 +53,13 @@ aside {
     flex-direction: column;
     row-gap: 15px;
 }
-aside img{
+
+aside img {
     width: 90%;
     height: auto;
 }
-aside svg{
+
+aside svg {
     width: auto;
     height: 50px;
 }
@@ -79,13 +81,49 @@ footer {
     font-weight: bold;
 }
 
-address{
+address {
     text-align: end;
 }
 
-em::before{
+em::before {
     content: "'";
 }
-em::after{
+
+em::after {
     content: "'";
+}
+
+/* Bibliography */
+#biblio {
+    display: flex;
+    justify-content: center;
+}
+
+caption {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* #biblio th, td{
+    text-align: start;
+    padding: 3px;
+} */
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+.series-row {
+    font-weight: bold;
+    text-align: center;
+}
+
+caption {
+    caption-side: top;
 }
