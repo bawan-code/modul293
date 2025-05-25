@@ -44,7 +44,13 @@ nav {
 
 main {
     grid-area: main;
+    text-align: justify;
     padding: 0 20px 0;
+}
+
+main img {
+    height: 130px;
+    margin: 5px;
 }
 
 aside {
@@ -52,6 +58,11 @@ aside {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
+}
+
+aside iframe {
+    width: 90%;
+    height: auto;
 }
 
 aside img {
@@ -67,8 +78,8 @@ aside svg {
 footer {
     grid-area: footer;
     display: flex;
-    align-items: end;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 20px;
     width: 100%;
 }
@@ -93,6 +104,20 @@ em::after {
     content: "'";
 }
 
+/* Home */
+#home {
+    padding: 0 60px 0;
+}
+
+#home h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#home article {
+    margin-bottom: 30px;
+}
+
 /* Bibliography */
 #biblio {
     display: flex;
@@ -103,11 +128,6 @@ caption {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
-
-/* #biblio th, td{
-    text-align: start;
-    padding: 3px;
-} */
 
 table {
     border-collapse: collapse;
@@ -126,4 +146,14 @@ td {
 
 caption {
     caption-side: top;
+}
+
+/* Form */
+#form{
+    padding: 0 60px 0;
+}
+#form h2, form {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
