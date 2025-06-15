@@ -45,6 +45,8 @@ body {
         "nav main aside"
         "footer footer footer";
     background-color: var(--shell);
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 /* Headerbereich */
@@ -77,10 +79,10 @@ nav {
     display: flex;
     justify-content: center;
     background-color: var(--dutch);
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
-nav ul{ 
+nav ul {
     position: sticky;
     top: 90px;
     display: flex;
@@ -93,7 +95,7 @@ nav ul{
     box-shadow: 0 6px 6px -2px var(--onyx);
 }
 
-nav ul>li{
+nav ul>li {
     margin-bottom: 10px;
 }
 
@@ -102,6 +104,7 @@ nav a {
     text-decoration: none;
     font-size: 1.5rem;
 }
+
 nav a:visited {
     color: var(--plum);
 }
@@ -110,7 +113,7 @@ nav a:visited {
 main {
     grid-area: main;
     text-align: justify;
-    padding: 30px 7vw 30px;
+    padding: 70px 7vw 30px;
 }
 
 /* Asideleiste */
@@ -128,6 +131,7 @@ aside h5 {
 }
 
 aside h5+iframe {
+    aspect-ratio: 5 / 3;
     width: 80%;
     height: auto;
     border: none;
@@ -154,7 +158,8 @@ footer {
     gap: 20px;
     width: 100%;
 }
-footer a:link{
+
+footer a:link {
     color: var(--cham);
 }
 
@@ -226,14 +231,89 @@ caption {
     caption-side: top;
 }
 
-/* Form */
-/* #form {
-    padding: 0 60px 0;
-} */
+/* Media */
+#media {
 
+    video {
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* Form */
 #form h2,
 form {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 450px) {
+
+    body {
+        grid-template-columns: 100%;
+        grid-template-rows: max-content 5vh max-content max-content max-content;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    /* Header */
+    header {
+        position: static;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    /* Navigationsleiste */
+    nav {
+        position: static;
+        grid-area: nav;
+        font-size: 0.6rem;
+        background-color: var(--dutch);
+        width: 100%;
+        padding-top: 0;
+    }
+
+    nav ul {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: 0 0 0 0;
+    }
+
+    nav ul>li {
+        margin-bottom: 0;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 900px) {
+
+    body {
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 7vh max-content max-content max-content;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "nav aside"
+            "footer footer";
+    }
+
+    footer {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
 }
