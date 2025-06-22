@@ -204,7 +204,8 @@ em::after {
 /* Bibliography */
 #biblio {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 caption {
@@ -232,12 +233,9 @@ caption {
 }
 
 /* Media */
-#media {
-
-    video {
-        width: 70%;
-        height: auto;
-    }
+#media video {
+    width: 70%;
+    height: auto;
 }
 
 /* Form */
