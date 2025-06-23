@@ -59,6 +59,7 @@ header {
     gap: 10px;
     color: var(--onyx);
     background-color: #FCF8EE;
+    max-width: 1500px;
     width: 100%;
     padding: 20px;
     z-index: 1;
